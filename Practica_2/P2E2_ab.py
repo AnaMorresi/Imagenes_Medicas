@@ -2,7 +2,6 @@ import cv2
 import sys 
 import numpy as np
 import matplotlib
-#matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import os.path
 
@@ -66,6 +65,10 @@ def hist_superpuestos(im, im2):
     ax.bar(bin_edges1[:-1], hist1, alpha=0.5, label='Original')
     ax.bar(bin_edges2[:-1], hist2, alpha=0.5, label='Ecualizada')    
     ax.legend(loc='upper right')
+    plt.ylabel('Cantidad de pixeles')
+    plt.xlabel('Escala de Grises')
+    plt.grid()
+    plt.ylim(0,1500)
     plt.show()
 
 def imagenes_superpuestas(im, im2):
@@ -83,7 +86,6 @@ def imagenes_superpuestas(im, im2):
 
 def process_pgm_file(im):
     imout = im.copy()
-    #   Escriba su procesamiento de imágenes aquí
     vmin = np.amin(imout)
     vmax = np.max(imout)
     L = vmax - vmin
@@ -100,14 +102,13 @@ def process_pgm_file(im):
         for j in range(len(imout[i])):
             #ecualizar
             imout[i][j]=int(SA[imout[i][j]])
-    #
     
     return imout
 
 if __name__ == "__main__":
     
     if(len(sys.argv)<3):
-        print("Usage: python read-write-pgm.py [infile.pgm] [outfile.pgm]")
+        print("Usage: python P2E2_ab.py [infile.pgm] [outfile.pgm]")
         exit(1)
 
     infile = sys.argv[1]
@@ -117,13 +118,11 @@ if __name__ == "__main__":
 
     im = np.array(img)
     print("Size of image: {}".format(im.shape))
-    #show_img_hist(im)
 
     imout = process_pgm_file(im)
 
     im2 = np.array(imout)
     print("Size of image: {}".format(im2.shape))
-    #show_img_hist(im2)
 
     hist_superpuestos(im,im2)
     imagenes_superpuestas(im, im2)
