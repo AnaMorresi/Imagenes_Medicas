@@ -1,4 +1,4 @@
-### Problemas correspondientes a la prectica 2 (practica-2.pdf). 
+Problemas correspondientes a la prectica 2 (practica-2.pdf). 
 Estan nomenclados de forma P2E{numero de ejercicio}.py
 Para el ejercicio 2, 
 P2E2_ab.py corresponde a los incisos (a) y (b), 
