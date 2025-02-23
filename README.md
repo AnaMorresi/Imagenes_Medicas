@@ -11,4 +11,4 @@ La organización del repositorio es la siguiente:
     - **PDF** con la descripción de la práctica.
     - **Figuras** utilizadas en los ejercicios.
     - **Scripts** en Python con la resolución de los ejercicios.
-    - **Archivo `Organizacion_Archivos.txt`** que explica la nomenclatura utilizada en los ejercicios.
+    - **Archivo `Organizacion_Archivos.md`** que explica la nomenclatura utilizada en los ejercicios.
