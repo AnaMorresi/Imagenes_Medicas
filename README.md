@@ -6,7 +6,7 @@ Este repositorio contiene material relacionado con la materia de Imágenes Médi
 
 La organización del repositorio es la siguiente:
 
-- **`Practica_2/`**: Contiene los archivos correspondientes a la práctica 2 de la materia.
+- **`Practica_n/`**: Contiene los archivos correspondientes a la práctica numero *n* de la materia. 
   - Dentro de cada carpeta de práctica encontrarás:
     - **PDF** con la descripción de la práctica.
     - **Figuras** utilizadas en los ejercicios.
